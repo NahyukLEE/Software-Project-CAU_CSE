@@ -1,3 +1,11 @@
+/**
+ * ê°•ì˜ ë° êµìˆ˜ : ì†Œí”„íŠ¸ì›¨ì–´í”„ë¡œì íŠ¸ 03ë¶„ë°˜ / ë°•ì°½ìœ¤ êµìˆ˜ë‹˜
+ * ì‘ì„±ì 		: ì´ë‚˜í˜_20194538 (nahyuk0113@cau.ac.kr)
+ * ì†Œì† 		: ì¤‘ì•™ëŒ€í•™êµ ì†Œí”„íŠ¸ì›¨ì–´í•™ë¶€ 2í•™ë…„
+ * ì½”ë“œ ì‘ì„±ì¼ 	: 2020ë…„ 6ì›” 5ì¼
+ * ì„¤ëª… 		: Schedule Plannerì˜ GUIë¥¼ êµ¬í˜„í•˜ëŠ” Class
+ */
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JFrame;
@@ -13,7 +21,7 @@ import java.time.LocalDateTime;
 
 public class SchedulePlannerGUI extends JFrame {
 
-	// ÇÁ·ÎÁ§Æ®5¿¡¼­ 2020³â 5¿ùÀÇ È­¸éÀ» º¸¿©ÁÖ±â À§ÇÑ »ó¼ö ¼±¾ğ
+	// í”„ë¡œì íŠ¸5ì—ì„œ 2020ë…„ 5ì›”ì˜ í™”ë©´ì„ ë³´ì—¬ì£¼ê¸° ìœ„í•œ ìƒìˆ˜ ì„ ì–¸
 	int year = 2020;
 	int month = 5;
 	
@@ -25,97 +33,97 @@ public class SchedulePlannerGUI extends JFrame {
 		setLocationRelativeTo(null); // Center the frame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		// ¿¬µµ¿Í ¿ù data°¡ Æ÷ÇÔµÇ¾îÀÖ´Â LocalDate ÀÚ·áÇü ¼±¾ğ
-		LocalDate defalutDate = LocalDate.of(year, month, 1); // ÇÁ·ÎÁ§Æ®6¿¡¼­ µ¿ÀûÀ¸·Î ¼öÁ¤
-		// ÇÁ·ÎÁ§Æ®5¿¡¼­´Â 2020³â 5¿ùÀÇ È­¸éÀ» Ãâ·ÂÇÑ´Ù.
+		// ì—°ë„ì™€ ì›” dataê°€ í¬í•¨ë˜ì–´ìˆëŠ” LocalDate ìë£Œí˜• ì„ ì–¸
+		LocalDate defalutDate = LocalDate.of(year, month, 1); // í”„ë¡œì íŠ¸6ì—ì„œ ë™ì ìœ¼ë¡œ ìˆ˜ì •
+		// í”„ë¡œì íŠ¸5ì—ì„œëŠ” 2020ë…„ 5ì›”ì˜ í™”ë©´ì„ ì¶œë ¥í•œë‹¤.
 		
 		
-		/** »ó´Ü ÆĞ³Î(panel1) ¼±¾ğ */
+		/** ìƒë‹¨ íŒ¨ë„(panel1) ì„ ì–¸ */
 		JPanel panel1 = new JPanel();
 		panel1.setPreferredSize(new Dimension(400,30));
 		panel1.setLayout(new BorderLayout(5,5)); // BorderLayout
 	    
-		// ÀÌÀü ´Ş ÀÌµ¿ JButton
+		// ì´ì „ ë‹¬ ì´ë™ JButton
 		JButton left = new JButton("<");
 		panel1.add(left, BorderLayout.WEST);
 		left.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("<ÀÌ Å¬¸¯µÇ¾ú½À´Ï´Ù.");
-				// ÀÌÀü ´Ş·Î ÀÌµ¿ÇÏ´Â µ¿ÀÛ ÇÁ·ÎÁ§Æ®6¿¡¼­ ÀÛ¾÷
+				System.out.println("<ì´ í´ë¦­ë˜ì—ˆìŠµë‹ˆë‹¤.");
+				// ì´ì „ ë‹¬ë¡œ ì´ë™í•˜ëŠ” ë™ì‘ í”„ë¡œì íŠ¸6ì—ì„œ ì‘ì—…
 			}
 		});
 		
-		// ´ÙÀ½ ´Ş ÀÌµ¿ JButton
+		// ë‹¤ìŒ ë‹¬ ì´ë™ JButton
 		JButton right = new JButton(">");
 		panel1.add(right, BorderLayout.EAST);
 		right.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println(">ÀÌ Å¬¸¯µÇ¾ú½À´Ï´Ù.");
-				// ´ÙÀ½ ´Ş·Î ÀÌµ¿ÇÏ´Â µ¿ÀÛ ÇÁ·ÎÁ§Æ®6¿¡¼­ ÀÛ¾÷
+				System.out.println(">ì´ í´ë¦­ë˜ì—ˆìŠµë‹ˆë‹¤.");
+				// ë‹¤ìŒ ë‹¬ë¡œ ì´ë™í•˜ëŠ” ë™ì‘ í”„ë¡œì íŠ¸6ì—ì„œ ì‘ì—…
 			}
 		});
 		
-		// ÇöÀç ¿¬µµ¿Í ´Ş Ç¥½Ã JLabel
+		// í˜„ì¬ ì—°ë„ì™€ ë‹¬ í‘œì‹œ JLabel
 		String center = Integer.toString(year) + "-" + Integer.toString(month);
 		JLabel yearAndMonth = new JLabel(center);
 		yearAndMonth.setHorizontalAlignment(JLabel.CENTER);
 		panel1.add(yearAndMonth, BorderLayout.CENTER);
 
 
-		/** ¿äÀÏ Á¤º¸°¡ µé¾î°¡´Â ÆĞ³Î(panel2) ¼±¾ğ */
+		/** ìš”ì¼ ì •ë³´ê°€ ë“¤ì–´ê°€ëŠ” íŒ¨ë„(panel2) ì„ ì–¸ */
 		JPanel panel2 = new JPanel();
 		panel2.setPreferredSize(new Dimension(400,30));
-		panel2.setLayout(new GridLayout(1,7)); // 1Çà 7¿­ Grid Layout
+		panel2.setLayout(new GridLayout(1,7)); // 1í–‰ 7ì—´ Grid Layout
 		
-		// ÀÏ¿äÀÏ JLabel
+		// ì¼ìš”ì¼ JLabel
 		JLabel sun = new JLabel("SUN");
 		sun.setHorizontalAlignment(JLabel.CENTER);
 		panel2.add(sun);
 		
-		// ¿ù¿äÀÏ JLabel
+		// ì›”ìš”ì¼ JLabel
 		JLabel mon = new JLabel("MON");
 		mon.setHorizontalAlignment(JLabel.CENTER);
 		panel2.add(mon);
 		
-		// È­¿äÀÏ JLabel
+		// í™”ìš”ì¼ JLabel
 		JLabel tue = new JLabel("TUE");
 		tue.setHorizontalAlignment(JLabel.CENTER);
 		panel2.add(tue);
 		
-		// ¼ö¿äÀÏ JLabel
+		// ìˆ˜ìš”ì¼ JLabel
 		JLabel wed = new JLabel("WED");
 		wed.setHorizontalAlignment(JLabel.CENTER);
 		panel2.add(wed);
 		
-		// ¸ñ¿äÀÏ JLabel
+		// ëª©ìš”ì¼ JLabel
 		JLabel thr = new JLabel("THR");
 		thr.setHorizontalAlignment(JLabel.CENTER);
 		panel2.add(thr);
 		
-		// ±İ¿äÀÏ JLabel
+		// ê¸ˆìš”ì¼ JLabel
 		JLabel fri = new JLabel("FRI");
 		fri.setHorizontalAlignment(JLabel.CENTER);
 		panel2.add(fri);
 		
-		// Åä¿äÀÏ JLabel
+		// í† ìš”ì¼ JLabel
 		JLabel sat = new JLabel("SAT");
 		sat.setHorizontalAlignment(JLabel.CENTER);
 		panel2.add(sat);
 		
 		
-		/** ³¯Â¥(Day)°¡ µé¾î°¡´Â ÆĞ³Î(panel3) ¼±¾ğ */
+		/** ë‚ ì§œ(Day)ê°€ ë“¤ì–´ê°€ëŠ” íŒ¨ë„(panel3) ì„ ì–¸ */
 		JPanel panel3 = new JPanel();
 		panel3.setPreferredSize(new Dimension(400,200));
-		panel3.setLayout(new GridLayout(0,7,2,2)); // 7¿­ÀÇ Grid, ÇàÀº ÀÚµ¿À¸·Î ¼³Á¤
+		panel3.setLayout(new GridLayout(0,7,2,2)); // 7ì—´ì˜ Grid, í–‰ì€ ìë™ìœ¼ë¡œ ì„¤ì •
 		
 		
-		/** -----³¯Â¥ ºÎºĞ ¾ÕÀÇ °ø¹é Ãß°¡----- */
-	    // ÇØ´ç ´ŞÀÇ Ã¹ ³¯ÀÌ ÀÏ¿äÀÏÀÏ °æ¿ì
+		/** -----ë‚ ì§œ ë¶€ë¶„ ì•ì˜ ê³µë°± ì¶”ê°€----- */
+	    // í•´ë‹¹ ë‹¬ì˜ ì²« ë‚ ì´ ì¼ìš”ì¼ì¼ ê²½ìš°
 	    if (defalutDate.getDayOfWeek().getValue() == 7) {
 			;
 	    }
 	    
-	    // ÇØ´ç ´ŞÀÇ Ã¹ ³¯ÀÌ ¿ù¿äÀÏ~Åä¿äÀÏÀÏ °æ¿ì
+	    // í•´ë‹¹ ë‹¬ì˜ ì²« ë‚ ì´ ì›”ìš”ì¼~í† ìš”ì¼ì¼ ê²½ìš°
 	    else {
 	    	for (int i=0; i<defalutDate.getDayOfWeek().getValue(); i++) {
 	    		panel3.add(new JLabel(""));
@@ -123,20 +131,28 @@ public class SchedulePlannerGUI extends JFrame {
 	    }
 		
 	    
-		/** -----ÇØ´ç ´ŞÀÇ ³¯Â¥¼ö¸¦ ¹Ş¾Æ Grid¿¡ ¼ıÀÚ JButton Ãß°¡----- */
+		/** -----í•´ë‹¹ ë‹¬ì˜ ë‚ ì§œìˆ˜ë¥¼ ë°›ì•„ Gridì— ìˆ«ì JButton ì¶”ê°€----- */
 		for (int i = 1; i <= defalutDate.lengthOfMonth(); i++) {
 			JButton days = new JButton(Integer.toString(i));
 			panel3.add(days);
 			days.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					System.out.println("Day ScheduleÀ» ¿ÀÇÂÇÕ´Ï´Ù.");
-					// ÇÁ·ÎÁ§Æ®6¿¡¼­ °¢°¢ ³¯Â¥º° DayScheduleGUI °´Ã¼¸¦ ÅëÇØ GUI¸¦ ±¸ÇöÇÒ ¿¹Á¤
+					System.out.println("Day Scheduleì„ ì˜¤í”ˆí•©ë‹ˆë‹¤.");
+					// í”„ë¡œì íŠ¸6ì—ì„œ ê°ê° ë‚ ì§œë³„ DayScheduleGUI ê°ì²´ë¥¼ í†µí•´ GUIë¥¼ êµ¬í˜„í•  ì˜ˆì •
 				}
 			});
 		}
 		
+		/** ë‚˜ë¨¸ì§€ Gridë¥¼ ê³µë°±ìœ¼ë¡œ ì±„ìš°ì¤Œ (Column ì˜¤ë¥˜ ë°©ì§€) */
+		int count = 7-((defalutDate.getDayOfWeek().getValue()+defalutDate.lengthOfMonth())%7);
+		if (count != 7) {
+			for (int i=0; i < count; i++) {
+	    		panel3.add(new JLabel(""));
+	    	}
+		}
 		
-		/** ¾Õ ¼¼ °³ÀÇ ÆĞ³ÎÀÌ ¿ä¼Ò°¡ µÇ´Â ÆĞ³Î(panel4) ¼±¾ğ */
+		
+		/** ì• ì„¸ ê°œì˜ íŒ¨ë„ì´ ìš”ì†Œê°€ ë˜ëŠ” íŒ¨ë„(panel4) ì„ ì–¸ */
 		JPanel panel4 = new JPanel();
 		panel4.setLayout(new BorderLayout());
 		panel4.add(panel1, BorderLayout.NORTH);
@@ -144,7 +160,7 @@ public class SchedulePlannerGUI extends JFrame {
 		panel4.add(panel3, BorderLayout.SOUTH);
 
 		
-		/** Frame¿¡ Panel Ç¥½Ã ¹× Pack */
+		/** Frameì— Panel í‘œì‹œ ë° Pack */
 		this.add(panel4);
 		this.pack();
 		this.setVisible(true);
